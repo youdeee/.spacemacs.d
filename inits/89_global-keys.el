@@ -173,6 +173,14 @@
 (bind-key "C-o ," 'replace-backward-from-kill-ring)
 (bind-key "s-w" 'window-resizer)
 
+
+(eval-after-load "emmet-mode"
+  '(progn
+     (define-key emmet-mode-keymap (kbd "C-j") nil)
+     ;;(define-key emmet-mode-keymap (kbd "TAB") nil)
+     (define-key emmet-mode-keymap (kbd "s-j") 'emmet-expand-line)))
+
+
 ;; (require 'thingopt)
 ;; (define-thing-commands)
 ;; (bind-key "M-3" 'mark-word*)

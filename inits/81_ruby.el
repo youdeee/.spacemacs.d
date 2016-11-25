@@ -23,9 +23,9 @@
 ;;       (indent-line-to indent)
 ;;       (when (> offset 0) (forward-char offset)))))
 
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
+;; (require 'ruby-block)
+;; (ruby-block-mode t)
+;; (setq ruby-block-highlight-toggle t)
 
 ;; (require 'ruby-end)
 ;; (add-hook 'ruby-mode-hook

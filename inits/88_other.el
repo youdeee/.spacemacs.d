@@ -137,15 +137,14 @@
 ;; (setq migemo-pattern-alist-file "~/.emacs.d/cache/migemo-pattern")
 ;; (setq migemo-frequent-pattern-alist-file "~/.emacs.d/cache/migemo-frequent")
 
-;(setq auto-save-file-name-transforms '((".*" ,my-backup-dir t)))
+;;(setq auto-save-file-name-transforms '((".*" ,my-backup-dir t)))
 ;; (custom-set-variables '(auto-save-list-file-prefix "~/.emacs.d/cache/auto-save-list/.saves-"))
 
 ;;(setq-default ac-sources (push 'ac-source-yasnippet ac-sources))
 
 
 ;; タイトルバーにファイルのフルパス表示
-(setq frame-title-format
-(format "%%f @%s" (system-name)))
+(setq frame-title-format (format "%%f @%s" (system-name)))
 
 ;; ;; タブの幅
 ;; ;;(setq tab-width 2)
