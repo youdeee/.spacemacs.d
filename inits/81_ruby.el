@@ -1,10 +1,10 @@
-;; (require 'ruby-mode)
+(require 'ruby-mode)
 ;; (autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
 ;; (add-to-list 'auto-mode-alist '("\\.rb" . ruby-mode))
 ;; (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 ;; (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 ;; (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
-;; (setq ruby-insert-encoding-magic-comment nil)
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;; ;; ruby-modeのインデントを改良する
 ;; (setq ruby-deep-indent-paren-style nil)
@@ -23,9 +23,9 @@
 ;;       (indent-line-to indent)
 ;;       (when (> offset 0) (forward-char offset)))))
 
-;; (require 'ruby-block)
-;; (ruby-block-mode t)
-;; (setq ruby-block-highlight-toggle t)
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
 
 ;; (require 'ruby-end)
 ;; (add-hook 'ruby-mode-hook

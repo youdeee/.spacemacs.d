@@ -43,8 +43,8 @@
 ;;   (server-start))
 ;; (defalias 'exit 'save-buffers-kill-emacs)
 
-;; (require 'indent-guide)
-;; (indent-guide-global-mode)
+(require 'indent-guide)
+(indent-guide-global-mode)
 
 ;; (require 'lispxmp)
 
@@ -118,7 +118,7 @@
 
 (require 'expand-region)
 
-(require 'smarter-compile)
+;;(require 'smarter-compile)
 
 ;; (require 'migemo)
 ;; (setq migemo-command "cmigemo")
@@ -165,12 +165,9 @@
 ;; ;; 補完可能なものを随時表示
 ;; (icomplete-mode 1)
 
-;; ;; バッファ末尾より後の行では、フリンジ左側に何か表示される
-;; (setq-default indicate-empty-lines t)
-
-;; ;; 矩形
-;; (cua-mode t)
-;; (setq cua-enable-cua-keys nil)
+;; 矩形
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
 
 ;; ;; 行末の空白を表示
 ;; ;;(setq-default show-trailing-whitespace t)

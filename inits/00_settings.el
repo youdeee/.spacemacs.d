@@ -26,14 +26,14 @@ wdired
 ;;         try-expand-dabbrev-from-kill))
 
 ;; マウス選択箇所を自動コピー
-;;(setq mouse-drag-copy-region t)
+(setq mouse-drag-copy-region t)
 
-;;(require 'generic-x)
+(require 'generic-x)
 
 ;;(setq truncate-partial-width-windows nil)
 
-;;(setq save-interprogram-paste-before-kill t)
-;;(setq yank-pop-change-selection t)
+(setq save-interprogram-paste-before-kill t)
+(setq yank-pop-change-selection t)
 
 ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
 (setq dired-dwim-target t)
@@ -42,5 +42,5 @@ wdired
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
 (setq dired-isearch-filenames t)
 
-;;(setq set-mark-command-repeat-pop t)
-;;(setq mark-ring-max 32)
+(setq set-mark-command-repeat-pop t)
+(setq mark-ring-max 32)

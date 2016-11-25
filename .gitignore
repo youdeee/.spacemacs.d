@@ -5,3 +5,5 @@
 .cask
 init.el~
 .DS_Store
+
+99_local.el
