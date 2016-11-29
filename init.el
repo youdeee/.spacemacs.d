@@ -360,9 +360,11 @@ you should place your code here."
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#c5c8c6" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#373b41"))
+ '(css-indent-offset 2)
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-color "#373b41" t)
  '(hl-sexp-background-color "#1c1f26")
+ '(js-indent-level 2)
  '(kill-ring-max 500)
  '(org-agenda-restore-windows-after-quit t t)
  '(package-selected-packages

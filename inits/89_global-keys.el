@@ -177,7 +177,8 @@
 (eval-after-load "emmet-mode"
   '(progn
      (define-key emmet-mode-keymap (kbd "C-j") nil)
-     ;;(define-key emmet-mode-keymap (kbd "TAB") nil)
+     (define-key emmet-mode-keymap (kbd "TAB") nil)
+     (define-key emmet-mode-keymap (kbd "<tab>") nil)
      (define-key emmet-mode-keymap (kbd "s-j") 'emmet-expand-line)))
 
 

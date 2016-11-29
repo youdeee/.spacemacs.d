@@ -146,12 +146,12 @@
 ;; タイトルバーにファイルのフルパス表示
 (setq frame-title-format (format "%%f @%s" (system-name)))
 
-;; ;; タブの幅
-;; ;;(setq tab-width 2)
-;; (setq-default tab-width 2 indent-tabs-mode nil)
+;; タブの幅
+;;(setq tab-width 2)
+(setq-default tab-width 2 indent-tabs-mode nil)
 
-;; ;;前の行とインデントをあわせる
-;; (setq indent-line-function 'indent-relative-maybe)
+;;前の行とインデントをあわせる
+(setq indent-line-function 'indent-relative-maybe)
 
 ;; ;; 補完 大文字小文字
 ;; (setq completion-ignore-case t)
