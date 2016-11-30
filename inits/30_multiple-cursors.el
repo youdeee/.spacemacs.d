@@ -1,6 +1,6 @@
-;; (require 'multiple-cursors)
+(require 'multiple-cursors)
 
-;; (require 'smartrep)
-;; (declare-function smartrep-define-key "smartrep")
+(require 'smartrep)
+(declare-function smartrep-define-key "smartrep")
 
-;; ;; (setq mc/list-file "~/.emacs.d/cache/.mc-lists.el")
+(custom-set-variables '(mc/list-file "~/.emacs.d/.cache/.mc-lists.el"))

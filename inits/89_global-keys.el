@@ -90,23 +90,23 @@
            ("<tab>" . nil)
            ("C-q" . yas-expand-from-trigger-key))
 
-;; ;; multi-cursor
-;; (bind-key "C-|" 'mc/edit-lines) ;;リージョン全てにカーソルおく
-;; (global-unset-key (kbd "C-\\"))
-;; (smartrep-define-key global-map "C-\\"
-;;   '(("C-\\"      . 'mc/mark-next-like-this)
-;;     ("n"        . 'mc/mark-next-like-this)
-;;     ("p"        . 'mc/unmark-next-like-this)
-;;     ("P"        . 'mc/mark-previous-like-this)
-;;     ("N"        . 'mc/unmark-previous-like-this)
-;;     ("s"        . 'mc/skip-to-next-like-this)
-;;     ("S"        . 'mc/skip-to-previous-like-this)
-;;     ("m"        . 'mc/mark-more-like-this-extended)
-;;     ("*"        . 'mc/mark-all-like-this)
-;;     ("d"        . 'mc/mark-all-like-this-dwim)
-;;     ("i"        . 'mc/insert-numbers)
-;;     ("o"        . 'mc/sort-regions)
-;;     ("O"        . 'mc/reverse-regions)))
+;; multi-cursor
+(bind-key "C-|" 'mc/edit-lines) ;;リージョン全てにカーソルおく
+(global-unset-key (kbd "C-\\"))
+(smartrep-define-key global-map "C-\\"
+  '(("C-\\"      . 'mc/mark-next-like-this)
+    ("n"        . 'mc/mark-next-like-this)
+    ("p"        . 'mc/unmark-next-like-this)
+    ("P"        . 'mc/mark-previous-like-this)
+    ("N"        . 'mc/unmark-previous-like-this)
+    ("s"        . 'mc/skip-to-next-like-this)
+    ("S"        . 'mc/skip-to-previous-like-this)
+    ("m"        . 'mc/mark-more-like-this-extended)
+    ("*"        . 'mc/mark-all-like-this)
+    ("d"        . 'mc/mark-all-like-this-dwim)
+    ("i"        . 'mc/insert-numbers)
+    ("o"        . 'mc/sort-regions)
+    ("O"        . 'mc/reverse-regions)))
 
 ;; ohter
 ;;(bind-key "C-o d" 'ag-dired)
