@@ -9,7 +9,6 @@
 ;; 編集時 buffer 再読み込み
 ;;(global-auto-revert-mode 1)
 
-wdired
 (require 'wdired)
 (setq wdired-allow-to-change-permissions t)
 (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)
