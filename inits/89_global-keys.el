@@ -104,7 +104,7 @@
     ("m"        . 'mc/mark-more-like-this-extended)
     ("*"        . 'mc/mark-all-like-this)
     ("d"        . 'mc/mark-all-like-this-dwim)
-    ("i"        . 'mc/insert-numbers)
+    ("i"        . 'my/mc/insert-numbers)
     ("o"        . 'mc/sort-regions)
     ("O"        . 'mc/reverse-regions)))
 
