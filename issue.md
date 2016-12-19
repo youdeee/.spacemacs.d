@@ -1,6 +1,9 @@
 # emacs周りでやりたいこと
 
 ## 欲しいコマンド
+- hiddenモード
+  (face-remap-add-relative 'default :foreground (face-attribute 'default :background))
+  (spacemacs/disable-hl-line-mode)
 - 複数のreplaceをguiっぽい感じで一気にやる機能
 - avyっぽいbuffer切り替え
 - 一気にsave-pointまでundo/redoする
