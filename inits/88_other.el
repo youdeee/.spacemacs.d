@@ -120,14 +120,14 @@
 
 ;;(require 'smarter-compile)
 
-;; (require 'migemo)
-;; (setq migemo-command "cmigemo")
-;; (setq migemo-options '("-q" "--emacs"))
-;; (setq migemo-dictionary "/usr/local/Cellar/cmigemo/HEAD/share/migemo/utf-8/migemo-dict")
-;; (setq migemo-user-dictionary nil)
-;; (setq migemo-regex-dictionary nil)
-;; (setq migemo-coding-system 'utf-8-unix)
-;; (migemo-init)
+(require 'migemo)
+(setq migemo-command "cmigemo")
+(setq migemo-options '("-q" "--emacs"))
+(setq migemo-dictionary "/usr/local/Cellar/cmigemo/HEAD/share/migemo/utf-8/migemo-dict")
+(setq migemo-user-dictionary nil)
+(setq migemo-regex-dictionary nil)
+(setq migemo-coding-system 'utf-8-unix)
+(migemo-init)
 
 (require 'editorconfig)
 (editorconfig-mode 1)
@@ -171,7 +171,6 @@
 ;; ;; 行末の空白を表示
 ;; ;;(setq-default show-trailing-whitespace t)
 ;; (require 'whitespace)
-;; (global-whitespace-mode 1)
 ;; (setq whitespace-style '(face trailing tabs empty space-mark tab-mark))
 
 ;; (setq whitespace-display-mappings
@@ -183,3 +182,18 @@
 ;;                     :background "#111111"
 ;;                     :foreground "DeepPink"
 ;;                     :underline t)
+
+(setq whitespace-style '(face           ; faceで可視化
+                         trailing       ; 行末
+                         tabs           ; タブ
+                         ;;                         empty          ; 先頭/末尾の空行
+                         space-mark     ; 表示のマッピング
+                         tab-mark
+                         ))
+(setq whitespace-display-mappings
+      '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
+        (space-mark ?\x3000 [?\□])))
+(global-whitespace-mode 1)
+
+(require 'avy-migemo)
+(avy-migemo-mode 1)

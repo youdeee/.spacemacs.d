@@ -68,7 +68,7 @@
 (bind-key "C-o f" 'helm-projectile-find-file) ;;'helm-ls-git-ls)
 (bind-key "M-y"     'helm-show-kill-ring)
 (bind-key "C-o a" 'helm-ag)
-(bind-key* "M-o" 'helm-swoop)
+(bind-key* "M-o" (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 (bind-key* "C-M-o" 'helm-multi-swoop-all)
 (bind-key "C-o C-a" 'helm-projectile-ag)
 (bind-key "C-x C-d" 'helm-dired-recent-dirs-view)

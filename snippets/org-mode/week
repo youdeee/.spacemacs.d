@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: week
+# key: w
+# --
+* Mon
+$0
+
+* Tue
+
+
+* Wed
+
+
+* Thu
+
+
+* Fri
+
+
+* Sat
+
+
+* Sun

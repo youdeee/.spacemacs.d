@@ -1,3 +1,5 @@
+(with-eval-after-load "helm" (helm-migemo-mode +1))
+
 ;;(require 'helm-config)
 ;; (require 'helm-ag)
 ;;(require 'migemo)
