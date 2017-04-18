@@ -98,3 +98,35 @@
 ;; (push '(slime-repl-mode) popwin:special-display-config)
 ;; ;; Connections
 ;; (push '(slime-connection-list-mode) popwin:special-display-config)
+
+(add-hook 'c-mode-hook 'my-c-mode-setup)
+(defun my-c-mode-setup ()
+  (define-key c-mode-base-map ";" nil))
+
+(defun indent-and-save-file (file)
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+        (progn
+          (indent-region (region-beginning) (region-end))
+          (message "Indented selected region."))
+      (progn
+        (evil-indent (point-min) (point-max))
+        (message "Indented buffer.")))
+    (whitespace-cleanup)
+    (save-buffer)))
+
+(defun indent-all-file-under-directory (dir)
+  (dolist (file (f-files dir nil t))
+    ;;(indent-and-save-file file)
+    (save-excursion
+      (find-file file)
+      (indent-region (point-min) (point-max))
+      (save-buffer))))
+
+(defun hoge (file)
+  (save-excursion
+    (find-file file)
+    (indent-region (point-min) (point-max))
+    (save-buffer)))
