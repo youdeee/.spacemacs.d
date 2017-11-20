@@ -1,7 +1,23 @@
 (with-eval-after-load "helm" (helm-migemo-mode +1))
 
+;; helm-ag
+(require 'helm-ag)
+(when (executable-find "rg")
+  (setq helm-ag-base-command "rg --vimgrep --no-heading"))
+(setq helm-ag-insert-at-point 'symbol)
+
+(defun helm-ag-dot-emacs ()
+  ".emacs.d以下を検索"
+  (interactive)
+  (helm-ag "~/.emacs.d/"))
+;; (require 'projectile nil t)
+;; (defun helm-projectile-ag ()
+;;   "Projectileと連携"
+;;   (interactive)
+;;   (helm-ag (projectile-project-root)))
+
+
 ;;(require 'helm-config)
-;; (require 'helm-ag)
 ;;(require 'migemo)
 
 ;; (helm-mode 1)
