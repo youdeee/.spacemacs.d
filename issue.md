@@ -1,6 +1,7 @@
 # emacs周りでやりたいこと
 
 ## 欲しいコマンド
+- ウィンドウ移動のときに行ごとじゃなくてウィンドウ自体に数字が出て飛べるようにしたい tmux
 - hiddenモード
   (face-remap-add-relative 'default :foreground (face-attribute 'default :background))
   (spacemacs/disable-hl-line-mode)
