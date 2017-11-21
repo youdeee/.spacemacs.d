@@ -197,3 +197,5 @@
 
 (require 'avy-migemo)
 (avy-migemo-mode 1)
+
+(setq switch-window-shortcut-style 'qwerty)

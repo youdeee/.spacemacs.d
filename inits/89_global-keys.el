@@ -49,9 +49,9 @@
 (bind-key* "s-<right>" 'spacemacs/layouts-transient-state/persp-next)
 (bind-key* "s-<left>" 'spacemacs/layouts-transient-state/persp-prev)
 
-;;(bind-key "C-z" 'mode-specific-command-prefix)
-;(global-unset-key (kbd "C-z"))
-;;(bind-key "C-q" 'back-to-indentation)
+;; (bind-key "C-z" 'mode-specific-command-prefix)
+;; (global-unset-key (kbd "C-z"))
+;; (bind-key "C-q" 'back-to-indentation)
 ;; (bind-key "C-o C-f" 'fci-mode)
 ;; (bind-key "M-n" (lambda () (interactive) (scroll-up 1)))
 ;; (bind-key "M-p" (lambda () (interactive) (scroll-down 1)))
@@ -108,6 +108,9 @@
     ("o"        . 'mc/sort-regions)
     ("O"        . 'mc/reverse-regions)))
 
+;; magit
+(bind-key "s-g" 'magit-status)
+
 ;; ohter
 ;;(bind-key "C-o d" 'ag-dired)
 (bind-key* "C-o r" 'anzu-query-replace-regexp)
@@ -138,7 +141,9 @@
 (bind-key "M-/" 'hippie-expand)
 (bind-key "C-x 1" 'zoom-window-zoom)
 (bind-key "C-x C-1" 'delete-other-windows)
-
+(if (require 'switch-window nil 'noerror)
+    (bind-key* "C-M-t" 'switch-window)
+  (bind-key* "C-M-t" 'move-window-opposite))
 
 ;; (bind-keys :map ac-menu-map
 ;;            ("C-n" . ac-next)
@@ -157,7 +162,7 @@
 ;; 自作関数
 (bind-key "s-," 'spacemacs/toggle-maximize-frame);;full-size
 (bind-key* "C-t" 'move-window)
-(bind-key* "C-M-t" 'move-window-opposite)
+;; (bind-key* "C-M-t" 'move-window-opposite)
 (bind-key "C-," 'kill-line-backward)
 (bind-key "C-M-k" 'kill-all-line-forward)
 (bind-key "C-M-," 'kill-all-line-backward)
