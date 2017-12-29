@@ -126,12 +126,13 @@
       (save-buffer))))
 
 (defun ruby-mode-set-frozen-string-literal-true ()
-  (when (eq major-mode 'ruby-mode)
-    (save-excursion
-      (widen)
-      (goto-char (point-min))
-      (unless (looking-at "^# frozen_string_literal: true")
-        (insert "# frozen_string_literal: true\n\n")))))
+  (when exec-hook
+      (when (eq major-mode 'ruby-mode)
+        (save-excursion
+          (widen)
+          (goto-char (point-min))
+          (unless (looking-at "^# frozen_string_literal: true")
+            (insert "# frozen_string_literal: true\n\n"))))))
 
 (add-hook 'ruby-mode-hook (lambda()
                             (add-hook 'before-save-hook 'ruby-mode-set-frozen-string-literal-true)))

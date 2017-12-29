@@ -67,7 +67,7 @@
 (bind-key* "C-x f" 'helm-mini)
 (bind-key "C-o f" 'helm-projectile-find-file) ;;'helm-ls-git-ls)
 (bind-key "M-y"     'helm-show-kill-ring)
-(bind-key "C-o a" 'helm-ag)
+(bind-key* "C-o a" 'helm-ag)
 (bind-key* "M-o" (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 (bind-key* "C-M-o" 'helm-multi-swoop-all)
 (bind-key "C-o C-a" 'helm-projectile-ag)
@@ -142,8 +142,8 @@
 (bind-key "C-x 1" 'zoom-window-zoom)
 (bind-key "C-x C-1" 'delete-other-windows)
 (if (require 'switch-window nil 'noerror)
-    (bind-key* "C-M-t" 'switch-window)
-  (bind-key* "C-M-t" 'move-window-opposite))
+    (bind-key* "M-T" 'switch-window))
+(bind-key* "C-M-t" 'move-window-opposite)
 
 ;; (bind-keys :map ac-menu-map
 ;;            ("C-n" . ac-next)
@@ -176,7 +176,7 @@
 (bind-key "C-o k" 'replace-forward-from-kill-ring)
 (bind-key "C-o ," 'replace-backward-from-kill-ring)
 (bind-key "s-w" 'window-resizer)
-
+(bind-key "s-s" 'save-buffer-without-hook)
 
 (eval-after-load "emmet-mode"
   '(progn

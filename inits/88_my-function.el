@@ -144,3 +144,9 @@
               (t
                (message "Quit")
                (throw 'end-flag t)))))))
+
+(defun save-buffer-without-hook ()
+  (interactive)
+  (setq exec-hook nil)
+  (save-buffer)
+  (setq exec-hook t))
