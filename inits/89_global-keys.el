@@ -13,6 +13,30 @@
 ;; i インデント削除
 
 
+;; 自作関数
+(global-unset-key (kbd "C-o"))
+(bind-key "C-o" 'mode-specific-command-prefix)
+
+(bind-key "s-," 'spacemacs/toggle-maximize-frame);;full-size
+(bind-key* "C-t" 'move-window)
+;; (bind-key* "C-M-t" 'move-window-opposite)
+(bind-key "C-," 'kill-line-backward)
+(bind-key "C-M-k" 'kill-all-line-forward)
+(bind-key "C-M-," 'kill-all-line-backward)
+(bind-key "M-m" 'start-and-end-macro)
+(bind-key "s-k" 'kill-*-buffer)
+;;(bind-key "C-x a k" 'kill-all-buffer)
+(bind-key "s-z" 'split-window-3)
+(bind-key "C-a" 'goto-line-beginning-or-indent)
+(bind-key "M-t" 'custom-transpose-char)
+;;(bind-key "C-1" 'replace-symbol-from-kill-ring)
+(bind-key "C-o k" 'replace-forward-from-kill-ring)
+(bind-key "C-o ," 'replace-backward-from-kill-ring)
+(bind-key "s-w" 'window-resizer)
+(bind-key "s-s" 'save-buffer-without-hook)
+
+
+;; defaults
 (bind-key* "C-h" 'delete-backward-char)
 (bind-key* "C-x k" 'kill-this-buffer)
 ;;(bind-key "s-&" 'kill-buffer)
@@ -34,8 +58,6 @@
 ;;(bind-key "s-r" 'revert-buffer)
 (bind-key "s-e" 'eval-buffer)
 (bind-key "C-M-i" 'delete-indentation)
-(global-unset-key (kbd "C-o"))
-(bind-key "C-o" 'mode-specific-command-prefix)
 ;; (global-unset-key (kbd "s-q"))
 ;; (bind-key* "s-q" 'auto-complete)
 
@@ -71,12 +93,12 @@
 (bind-key* "M-o" (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 (bind-key* "C-M-o" 'helm-multi-swoop-all)
 (bind-key "C-o C-a" 'helm-projectile-ag)
-(bind-key "C-x C-d" 'helm-dired-recent-dirs-view)
+;; (bind-key "C-x C-d" 'helm-dired-recent-dirs-view)
 (bind-key "<f1> a" 'helm-apropos)
-(bind-keys :map helm-find-files-map
-           ("TAB" . helm-execute-persistent-action))
-(bind-keys :map helm-read-file-map
-           ("TAB" . helm-execute-persistent-action))
+;; (bind-keys :map helm-find-files-map
+;;            ("TAB" . helm-execute-persistent-action))
+;; (bind-keys :map helm-read-file-map
+;;            ("TAB" . helm-execute-persistent-action))
 ;;(define-key helm-map (kbd "C-h") 'delete-backward-char)
 ;;(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 
@@ -123,8 +145,8 @@
 
 (bind-key "M-{" 'goto-last-change)
 (bind-key "M-}" 'goto-last-change-reverse)
-(bind-key "M-[" 'point-undo)
-(bind-key "M-]" 'point-redo)
+;; (bind-key "M-[" 'point-undo)
+;; (bind-key "M-]" 'point-redo)
 ;;(bind-key "C-x c" 'smarter-compile)
 (bind-key* "C-;" 'avy-goto-char)
 (bind-key* "C-:" 'avy-goto-char-2)
@@ -158,25 +180,6 @@
 ;; (bind-keys :map isearch-mode-map
 ;;            ("C-;" . avy-migemo-isearch))
 
-
-;; 自作関数
-(bind-key "s-," 'spacemacs/toggle-maximize-frame);;full-size
-(bind-key* "C-t" 'move-window)
-;; (bind-key* "C-M-t" 'move-window-opposite)
-(bind-key "C-," 'kill-line-backward)
-(bind-key "C-M-k" 'kill-all-line-forward)
-(bind-key "C-M-," 'kill-all-line-backward)
-(bind-key "M-m" 'start-and-end-macro)
-(bind-key "s-k" 'kill-*-buffer)
-;;(bind-key "C-x a k" 'kill-all-buffer)
-(bind-key "s-z" 'split-window-3)
-(bind-key "C-a" 'goto-line-beginning-or-indent)
-(bind-key "M-t" 'custom-transpose-char)
-;;(bind-key "C-1" 'replace-symbol-from-kill-ring)
-(bind-key "C-o k" 'replace-forward-from-kill-ring)
-(bind-key "C-o ," 'replace-backward-from-kill-ring)
-(bind-key "s-w" 'window-resizer)
-(bind-key "s-s" 'save-buffer-without-hook)
 
 (eval-after-load "emmet-mode"
   '(progn

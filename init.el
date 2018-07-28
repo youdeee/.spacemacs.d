@@ -80,7 +80,6 @@ values."
      smart-newline
      zop-to-char
      goto-chg
-     point-undo
      init-loader
      undohist
      recentf-ext
@@ -94,6 +93,7 @@ values."
      avy-migemo
      helm-bundle-show
      switch-window
+     ;; point-undo
      ;;ruby-block
      ;;ruby-end
      ;;auto-indent-mode

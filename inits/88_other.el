@@ -114,7 +114,8 @@
 
 (require 'goto-chg)
 
-(require 'point-undo)
+;; (require 'point-undo)
+
 
 (require 'expand-region)
 
