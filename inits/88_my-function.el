@@ -150,3 +150,46 @@
   (setq exec-hook nil)
   (save-buffer)
   (setq exec-hook t))
+
+(defun timestamp ()
+  (interactive)
+  (insert (format-time-string "%Y/%m/%d %H:%M")))
+
+(defun start-book-memo (title)
+  (interactive "sInput book title: ")
+  (let* ((file (concat "~/Dropbox/junk/book/" (format-time-string "%Y-%m-%d-%H%M_") title ".org"))
+         (contents (concat "#+TITLE: " title "
+
+* Stats
+開始 " (format-time-string "%Y/%m/%d %H:%M") "
+終了 
+消費P 
+
+* テンプレ
+** Before
+- 
+** 気づき
+- 
+** Todo
+- 
+
+* メモ
+- 
+
+* 140字まとめ
+
+* 5mスクリプト(1000字?)
+
+* 著者
+* 目的
+* 中心点
+* 所感
+* 内容メモ
+** 本見ずに
+** 本見ながら
+")))
+    (write-region contents nil file)
+    (find-file file))
+  (outline-show-all)
+  (goto-line 10)
+  (end-of-line))
