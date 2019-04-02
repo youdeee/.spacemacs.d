@@ -166,6 +166,8 @@
 (if (require 'switch-window nil 'noerror)
     (bind-key* "M-T" 'switch-window))
 (bind-key* "C-M-t" 'move-window-opposite)
+(bind-key "s-b" 'bm-toggle)
+(bind-key "M-s-b" 'bm-show-all)
 
 ;; (bind-keys :map ac-menu-map
 ;;            ("C-n" . ac-next)
