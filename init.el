@@ -100,6 +100,7 @@ values."
      helm-bundle-show
      switch-window
      bm
+     helm-bm
      ;; point-undo
      ;;ruby-block
      ;;ruby-end

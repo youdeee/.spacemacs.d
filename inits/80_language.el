@@ -1,3 +1,6 @@
+(dumb-jump-mode)
+(setq bm-cycle-all-buffers t)
+
 ;; (require 'lsp-mode)
 ;; (add-hook 'ruby-mode-hook #'lsp)
 
