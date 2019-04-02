@@ -131,7 +131,7 @@
         (save-excursion
           (widen)
           (goto-char (point-min))
-          (unless (looking-at "^# frozen_string_literal: true")
+          (unless (looking-at "^# frozen_string_literal:")
             (insert "# frozen_string_literal: true\n\n"))))))
 
 (add-hook 'ruby-mode-hook (lambda()
