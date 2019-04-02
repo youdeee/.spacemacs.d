@@ -361,6 +361,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
+  (require 'server)
+  (unless (server-running-p)
+    (server-start))
+
   (require 'init-loader)
   (setq init-loader-show-log-after-init 'error-only)
   (init-loader-load "~/.spacemacs.d/inits")

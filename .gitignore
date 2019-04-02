@@ -5,5 +5,6 @@
 .cask
 init.el~
 .DS_Store
+.spacemacs.env
 
 99_local.el
