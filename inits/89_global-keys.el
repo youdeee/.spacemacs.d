@@ -93,6 +93,7 @@
 (bind-key* "M-o" (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 (bind-key* "C-M-o" 'helm-multi-swoop-all)
 (bind-key "C-o C-a" 'helm-projectile-ag)
+(bind-key "C-x b" 'helm-do-ag-buffers)
 ;; (bind-key "C-x C-d" 'helm-dired-recent-dirs-view)
 (bind-key "<f1> a" 'helm-apropos)
 ;; (bind-keys :map helm-find-files-map
