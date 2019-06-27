@@ -89,11 +89,11 @@
 (bind-key* "C-x f" 'helm-mini)
 (bind-key "C-o f" 'helm-projectile-find-file) ;;'helm-ls-git-ls)
 (bind-key "M-y"     'helm-show-kill-ring)
-(bind-key* "C-o a" 'helm-ag)
+(bind-key* "C-o a" 'helm-do-ag) ;; helm-ag
 (bind-key* "M-o" (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 (bind-key* "C-M-o" 'helm-multi-swoop-all)
-(bind-key "C-o C-a" 'helm-projectile-ag)
-(bind-key "C-x b" 'helm-do-ag-buffers)
+(bind-key "C-o C-a" 'helm-multi-swoop-projectile) ;; helm-projectile-ag
+;; (bind-key "C-x b" 'helm-do-ag-buffers)
 ;; (bind-key "C-x C-d" 'helm-dired-recent-dirs-view)
 (bind-key "<f1> a" 'helm-apropos)
 ;; (bind-keys :map helm-find-files-map
