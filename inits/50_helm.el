@@ -6,10 +6,13 @@
   (setq helm-ag-base-command "rg --vimgrep --no-heading"))
 (setq helm-ag-insert-at-point 'symbol)
 
-(defun helm-ag-dot-emacs ()
-  ".emacs.d以下を検索"
+(defun helm-ag-dot-spacemacs ()
+  ".spacemacs.d以下を検索"
   (interactive)
-  (helm-ag "~/.emacs.d/"))
+  (helm-ag "~/.spacemacs.d/"))
+
+(setq helm-swoop-split-window-function 'spacemacs//display-helm-window)
+
 ;; (require 'projectile nil t)
 ;; (defun helm-projectile-ag ()
 ;;   "Projectileと連携"
