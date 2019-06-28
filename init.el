@@ -102,6 +102,7 @@ values."
      bm
      helm-bm
      presentation
+     vmd-mode
      ;; point-undo
      ;;ruby-block
      ;;ruby-end

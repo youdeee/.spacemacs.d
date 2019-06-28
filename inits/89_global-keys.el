@@ -171,7 +171,7 @@
 (bind-key "s-B" 'bm-next)
 (bind-key "s-M-b" 'helm-bm)
 (bind-key "C-M-n" 'dumb-jump-go)
-
+(bind-key "C-c C-c" 'vmd-mode markdown-mode-map)
 
 ;; (bind-keys :map ac-menu-map
 ;;            ("C-n" . ac-next)
