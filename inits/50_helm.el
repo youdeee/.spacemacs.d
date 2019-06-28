@@ -11,8 +11,6 @@
   (interactive)
   (helm-ag "~/.spacemacs.d/"))
 
-(setq helm-swoop-split-window-function 'spacemacs//display-helm-window)
-
 ;; (require 'projectile nil t)
 ;; (defun helm-projectile-ag ()
 ;;   "Projectileと連携"

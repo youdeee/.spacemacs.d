@@ -201,3 +201,5 @@
 (avy-migemo-mode 1)
 
 (setq switch-window-shortcut-style 'qwerty)
+
+(setq helm-swoop-split-window-function 'spacemacs//display-helm-window)
