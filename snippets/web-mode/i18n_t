@@ -3,4 +3,4 @@
 # key: t
 # binding: direct-keybinding
 # --
-<%= t('$0') %>
+<%= t("$0") %>

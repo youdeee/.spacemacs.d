@@ -32,6 +32,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      elixir
+     erlang
      shell-scripts
      nginx
      html
